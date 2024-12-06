@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex items-center justify-center h-screen bg-gray-100">
+      <div class="p-8">
+        <p class="uppercase font-bold text-center mb-10 text-xl text-blue-900">
+          login
+        </p>
+        <form class="flex flex-col space-y-3 w-[350px]" method="POST">
+          <input
+            class="h-10 bg-gray-200 px-5 py-2 focus:outline-none"
+            type="text"
+            name="username"
+            placeholder="Username"
+          />
+          <input
+            class="h-10 bg-gray-200 px-5 py-2 focus:outline-none"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+          <div class="flex flex-row justify-between items-center space-y-3">
+            <div class="checkbox">
+              <input
+                class="peer-checked:bg-blue-500"
+                type="checkbox"
+                id="remember"
+              />
+              <label class="capitalize" for="remember">remember me</label>
+            </div>
+            <a class="text-purple-600" href="#">forgot ?</a>
+          </div>
+          <button
+            class="bg-purple-600 h-[50px] text-white uppercase"
+            type="submit"
+          >
+            login
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
