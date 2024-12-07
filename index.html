@@ -1,133 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-      * {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Roboto", sans-serif;
-      }
-      .truncate-one-line {
-        white-space: nowrap; /* Prevent text from wrapping to the next line */
-        overflow: hidden; /* Hide overflow text */
-        text-overflow: ellipsis;
-      }
-      .product-card {
-        opacity: 0; /* Initially hidden */
-        transform: translateX(100px); /* Start from the right */
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-      }
-    </style>
-    <!-- Animate css -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-  </head>
 
-  <body class="bg-gray-100">
-    <nav
-      id="nav"
-      class="bg-white h-16 border-b border-gray-300 flex items-center"
-    >
-      <div class="container mx-auto flex items-center justify-between w-full">
-        <!-- Logo Section -->
-        <div class="logo uppercase font-bold text-violet-800 cursor-pointer">
-          Logo
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-        <!-- Links Section -->
-        <div class="links flex flex-grow justify-center">
-          <ul class="hidden md:flex space-x-5 h-full items-center">
-            <li
-              class="uppercase hover:bg-gray-200 hover:border-b-2 hover:font-bold border-violet-800 hover:text-violet-800 px-5 cursor-pointer flex items-center py-5 ease-in-out duration-300"
-            >
-              Pc Gamer
-            </li>
-            <li
-              class="uppercase hover:bg-gray-200 hover:border-b-2 hover:font-bold border-violet-800 hover:text-violet-800 px-5 cursor-pointer flex items-center py-5 ease-in-out duration-300"
-            >
-              Pc Portable
-            </li>
-            <li
-              class="uppercase hover:bg-gray-200 hover:border-b-2 hover:font-bold border-violet-800 hover:text-violet-800 px-5 cursor-pointer flex items-center py-5 ease-in-out duration-300"
-            >
-              Console
-            </li>
-            <li
-              class="uppercase hover:bg-gray-200 hover:border-b-2 hover:font-bold border-violet-800 hover:text-violet-800 px-5 cursor-pointer flex items-center py-5 ease-in-out duration-300"
-            >
-              smart phone
-            </li>
-          </ul>
-        </div>
+    * {
+      scroll-behavior: smooth;
+    }
 
-        <!-- Login Section -->
-        <div
-          class="hover:bg-violet-800 hover:text-white cursor-pointer px-5 py-5 ease-in-out duration-300"
-        >
-          <a href="/admin/login.html">Login</a>
-        </div>
-        <div
-          class="hover:bg-violet-800 hover:text-white cursor-pointer px-5 py-5 ease-in-out duration-300"
-        >
-          <a href="/admin/register.html">Register</a>
-        </div>
+    body {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .truncate-one-line {
+      white-space: nowrap;
+      /* Prevent text from wrapping to the next line */
+      overflow: hidden;
+      /* Hide overflow text */
+      text-overflow: ellipsis;
+    }
+
+    .product-card {
+      opacity: 0;
+      /* Initially hidden */
+      transform: translateX(100px);
+      /* Start from the right */
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+  </style>
+  <!-- Animate css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="bg-gray-100">
+  <nav id="nav" class="bg-white h-16 border-b border-gray-300 flex items-center">
+    <div class="container mx-auto flex items-center justify-between w-full">
+      <!-- Logo Section -->
+      <div class="logo uppercase font-bold text-violet-800 cursor-pointer">
+        Logo
       </div>
-    </nav>
-    <section class="content mt-5">
-      <div
-        class="container mx-auto flex flex-col md:flex-row justify-between space-x-5"
-      >
-        <!-- Aside -->
-        <div class="aside basis-2/12">
-          <!-- New arrival  -->
-          <div class="bg-white border mb-5">
-            <div
-              class="aside-content bg-violet-800 text-white text-center px-5 py-20"
-            >
-              <p class="text-2xl mb-5 uppercase font-bold">New arrival</p>
-              <p class="text-small mb-5 capitalize">Discover our new product</p>
-              <a
-                href=""
-                class="p-2 border border-white rounded hover:bg-white hover:text-violet-800 ease-in-out duration-300"
-                >Discover</a
-              >
-            </div>
-          </div>
 
-          <div class="bg-white border border-gray-300 mb-5">
-            <div
-              class="aside-header h-10 text-center py-2 bg-violet-800 font-bold text-white"
-            >
-              Categories
-            </div>
-            <div class="aside-content text-center h">
-              <ul class="p-0">
-                <li class="py-2 border-b border-gray-300">
-                  <a href="">Pc gamer</a>
-                </li>
-                <li class="py-2 border-b border-gray-300">
-                  <a href="">Pc gamer</a>
-                </li>
-                <li class="py-2 border-b border-gray-300">
-                  <a href="">Pc gamer</a>
-                </li>
-                <li class="py-2 border-b border-gray-300">
-                  <a href="">Pc gamer</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <!-- Links Section -->
+      <div class="links flex flex-grow justify-center">
+        <ul class="hidden md:flex space-x-5 h-full items-center">
+          <li
+            class="uppercase hover:bg-gray-200 hover:border-b-2 hover:font-bold border-violet-800 hover:text-violet-800 px-5 cursor-pointer flex items-center py-5 ease-in-out duration-300">
+            Pc Gamer
+          </li>
+          <li
+            class="uppercase hover:bg-gray-200 hover:border-b-2 hover:font-bold border-violet-800 hover:text-violet-800 px-5 cursor-pointer flex items-center py-5 ease-in-out duration-300">
+            Pc Portable
+          </li>
+          <li
+            class="uppercase hover:bg-gray-200 hover:border-b-2 hover:font-bold border-violet-800 hover:text-violet-800 px-5 cursor-pointer flex items-center py-5 ease-in-out duration-300">
+            Console
+          </li>
+          <li
+            class="uppercase hover:bg-gray-200 hover:border-b-2 hover:font-bold border-violet-800 hover:text-violet-800 px-5 cursor-pointer flex items-center py-5 ease-in-out duration-300">
+            smart phone
+          </li>
+        </ul>
+      </div>
 
-          <!--Todo later-->
-          <!-- <div class="bg-white border border-gray-300 mb-5">
+      <!-- Login Section -->
+      <div class="hover:bg-violet-800 hover:text-white cursor-pointer px-5 py-5 ease-in-out duration-300">
+        <a href="/admin/login.html">Login</a>
+      </div>
+      <div class="hover:bg-violet-800 hover:text-white cursor-pointer px-5 py-5 ease-in-out duration-300">
+        <a href="/admin/register.html">Register</a>
+      </div>
+    </div>
+  </nav>
+  <section class="content mt-5">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between space-x-5">
+      <!-- Aside -->
+      <div class="aside basis-2/12">
+        <!-- New arrival  -->
+        <div class="bg-white border mb-5">
+          <div class="aside-content bg-violet-800 text-white text-center px-5 py-20">
+            <p class="text-2xl mb-5 uppercase font-bold">New arrival</p>
+            <p class="text-small mb-5 capitalize">Discover our new product</p>
+            <a href=""
+              class="p-2 border border-white rounded hover:bg-white hover:text-violet-800 ease-in-out duration-300">Discover</a>
+          </div>
+        </div>
+
+        <div class="bg-white border border-gray-300 mb-5">
+          <div class="aside-header h-10 text-center py-2 bg-violet-800 font-bold text-white">
+            Categories
+          </div>
+          <div class="aside-content text-center h">
+            <ul class="p-0">
+              <li class="py-2 border-b border-gray-300">
+                <a href="">Pc gamer</a>
+              </li>
+              <li class="py-2 border-b border-gray-300">
+                <a href="">Pc gamer</a>
+              </li>
+              <li class="py-2 border-b border-gray-300">
+                <a href="">Pc gamer</a>
+              </li>
+              <li class="py-2 border-b border-gray-300">
+                <a href="">Pc gamer</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--Todo later-->
+        <!-- <div class="bg-white border border-gray-300 mb-5">
           <div class="aside-header h-10 text-center py-2 bg-violet-800 font-bold text-white">Top sales</div>
           <div class="aside-content">
             <ul class="p-0">
@@ -145,628 +131,376 @@
               </li>
             </ul>
           </div> -->
-        </div>
-
-        <section class="basis-10/12 mb-5 flex flex-col">
-          <div class="popular flex flex-wrap gap-2 mb-2">
-            <div
-              class="product-card md:basis-[24%] basis-[100%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-            <div
-              class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white"
-            >
-              <img
-                class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1"
-                src="https://placehold.co/200"
-                alt=""
-              />
-              <p
-                class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64"
-              >
-                <a href=""
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Optio, unde!</a
-                >
-              </p>
-              <p class="price text-center p-2 border-b border-gray-300 pb-1">
-                1500<span class="text-violet-800 font-bold"> MAD </span>
-              </p>
-              <a
-                class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
-                href="#"
-                >Add to cart</a
-              >
-            </div>
-          </div>
-          <div class="pagination w-full">
-            <ul class="flex flex-row justify-center items-center gap-5">
-              <li
-                class="bg-violet-800 text-white hover:bg-white hover:text-violet-800 rounded px-3 py-1 border border-violet-800 cursor-pointer"
-              >
-                1
-              </li>
-              <li
-                class="bg-violet-800 text-white hover:bg-white hover:text-violet-800 rounded px-3 py-1 border border-violet-800 cursor-pointer"
-              >
-                2
-              </li>
-              <li
-                class="bg-violet-800 text-white hover:bg-white hover:text-violet-800 rounded px-3 py-1 border border-violet-800 cursor-pointer"
-              >
-                3
-              </li>
-              <li
-                class="bg-violet-800 text-white hover:bg-white hover:text-violet-800 rounded px-3 py-1 border border-violet-800 cursor-pointer"
-              >
-                4
-              </li>
-              <li
-                class="bg-violet-800 text-white hover:bg-white hover:text-violet-800 rounded px-3 py-1 border border-violet-800 cursor-pointer"
-              >
-                >>
-              </li>
-            </ul>
-          </div>
-        </section>
       </div>
-    </section>
-    <footer class="bg-violet-800 text-white py-5">
-      <div
-        class="container mx-auto flex flex-col md:flex-row justify-between gap-5"
-      >
-        <!-- First Column: Links -->
-        <div class="md:basis-1/4 basis-[100%]">
-          <ul class="links flex flex-col justify-center w-full h-full">
-            <p class="mb-4 font-bold text-2xl text-center">Hardware Store</p>
-            <p class="mb-4"><span>Phone : </span>05 24 24 05 05</p>
-            <p class="mb-4"><span>fax : </span>05 24 24 05 05</p>
-            <p class="mb-4"><span>Email : </span>houssam@store.com</p>
+
+      <section class="basis-10/12 mb-5 flex flex-col">
+        <div class="popular flex flex-wrap gap-2 mb-2">
+          <div
+            class="product-card md:basis-[24%] basis-[100%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+          <div
+            class="product-card md:basis-[24%] basis-[100%] border border-gray-300 p-1 rounded bg-gray-100 mb-2 bg-white">
+            <img class="object-cover md:h-36 h-64 w-full border-b border-gray-300 pb-1" src="https://placehold.co/200"
+              alt="" />
+            <p class="product-title border-b border-gray-300 pb-1 px-3 text-small truncate-one-line w-full md:w-64">
+              <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Optio, unde!</a>
+            </p>
+            <p class="price text-center p-2 border-b border-gray-300 pb-1">
+              1500<span class="text-violet-800 font-bold"> MAD </span>
+            </p>
+            <a class="block text-center md:mx-3 my-3 py-2 bg-violet-800 text-white hover:bg-white hover:text-violet-800 border-2 border-violet-800 ease-in-out duration-300"
+              href="#">Add to cart</a>
+          </div>
+        </div>
+        <div class="pagination w-full">
+          <ul class="flex flex-row justify-center items-center gap-5">
             <li
-              class="capitalize last:border-b border-t border-gray-300 text-center py-2"
-            >
-              <a href="">About us</a>
+              class="bg-violet-800 text-white hover:bg-white hover:text-violet-800 rounded px-3 py-1 border border-violet-800 cursor-pointer">
+              1
             </li>
             <li
-              class="capitalize last:border-b border-t border-gray-300 text-center py-2"
-            >
-              <a href="">Shipping</a>
+              class="bg-violet-800 text-white hover:bg-white hover:text-violet-800 rounded px-3 py-1 border border-violet-800 cursor-pointer">
+              2
             </li>
             <li
-              class="capitalize last:border-b border-t border-gray-300 text-center py-2"
-            >
-              <a href="">Privacy and policy</a>
+              class="bg-violet-800 text-white hover:bg-white hover:text-violet-800 rounded px-3 py-1 border border-violet-800 cursor-pointer">
+              3
             </li>
             <li
-              class="capitalize last:border-b border-t border-gray-300 text-center py-2"
-            >
-              <a href="">Term of use</a>
+              class="bg-violet-800 text-white hover:bg-white hover:text-violet-800 rounded px-3 py-1 border border-violet-800 cursor-pointer">
+              4
+            </li>
+            <li
+              class="bg-violet-800 text-white hover:bg-white hover:text-violet-800 rounded px-3 py-1 border border-violet-800 cursor-pointer">
+              >>
             </li>
           </ul>
         </div>
-
-        <!-- Second Column: Contact Form -->
-        <div
-          class="md:basis-1/4 basis-[100%] md:border-l md:border-r border-gray-300 px-5 pb-5"
-        >
-          <h3 class="uppercase font-bold mb-5 text-center py-5">Contact us</h3>
-          <form action="" method="POST" class="flex flex-col gap-5">
-            <input
-              class="h-10 px-5 py-1 text-slate-900 focus:outline-none rounded-md"
-              type="text"
-              placeholder="Name"
-            />
-            <input
-              class="h-10 px-5 py-1 text-slate-900 focus:outline-none rounded-md"
-              type="email"
-              placeholder="Email"
-            />
-            <textarea
-              class="h-20 px-5 py-1 text-slate-900 focus:outline-none resize-none rounded-md"
-              name="message"
-              placeholder="Your Message"
-            ></textarea>
-            <button
-              class="border-2 border-white hover:bg-white hover:text-violet-800 hover:border-none font-bold uppercase h-12 px-5 py-1 ease-in-out duration-300"
-              type="submit"
-            >
-              Send
-            </button>
-          </form>
-        </div>
-
-        <!-- Third Column: Google Map -->
-        <div class="md:basis-2/4 basis-[100%]">
-          <iframe
-            class="w-full h-full"
-            src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d13583.765817276042!2d-7.994791852031185!3d31.662821450420534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0xdafedce17d060b1%3A0x642452f201ffd869!2sCentre%20Hospitalier%20Universitaire%20Mohammed%20VI%D8%8C%20BP2360%20Principal%2C%20Av.%20Ibn%20Sina%2C%20Marrakesh!3m2!1d31.664720799999998!2d-7.9963213!5e0!3m2!1sfr!2sma!4v1733229354597!5m2!1sfr!2sma"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-    </footer>
-    <div class="text-center text-white capitalize bg-violet-950 py-5">
-      all right reserved 2024 &copy
+      </section>
     </div>
-    <!-- Back to Top Button -->
-<button id="back-top" class="fixed bottom-5 right-5 px-4 py-2 bg-violet-900 text-white rounded-lg opacity-0 pointer-events-none transition-opacity duration-300">
-  Back to Top
-</button>
+  </section>
+  <footer class="bg-violet-800 text-white py-5">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between gap-5">
+      <!-- First Column: Links -->
+      <div class="md:basis-1/4 basis-[100%]">
+        <ul class="links flex flex-col justify-center w-full h-full">
+          <p class="mb-4 font-bold text-2xl text-center">Hardware Store</p>
+          <p class="mb-4"><span>Phone : </span>05 24 24 05 05</p>
+          <p class="mb-4"><span>fax : </span>05 24 24 05 05</p>
+          <p class="mb-4"><span>Email : </span>houssam@store.com</p>
+          <li class="capitalize last:border-b border-t border-gray-300 text-center py-2">
+            <a href="">About us</a>
+          </li>
+          <li class="capitalize last:border-b border-t border-gray-300 text-center py-2">
+            <a href="">Shipping</a>
+          </li>
+          <li class="capitalize last:border-b border-t border-gray-300 text-center py-2">
+            <a href="">Privacy and policy</a>
+          </li>
+          <li class="capitalize last:border-b border-t border-gray-300 text-center py-2">
+            <a href="">Term of use</a>
+          </li>
+        </ul>
+      </div>
 
-    <script src="script.js"></script>
-  </body>
+      <!-- Second Column: Contact Form -->
+      <div class="md:basis-1/4 basis-[100%] md:border-l md:border-r border-gray-300 px-5 pb-5">
+        <h3 class="uppercase font-bold mb-5 text-center py-5">Contact us</h3>
+        <form action="" method="POST" class="flex flex-col gap-5">
+          <input class="h-10 px-5 py-1 text-slate-900 focus:outline-none rounded-md" type="text" placeholder="Name" />
+          <input class="h-10 px-5 py-1 text-slate-900 focus:outline-none rounded-md" type="email" placeholder="Email" />
+          <textarea class="h-20 px-5 py-1 text-slate-900 focus:outline-none resize-none rounded-md" name="message"
+            placeholder="Your Message"></textarea>
+          <button
+            class="border-2 border-white hover:bg-white hover:text-violet-800 hover:border-none font-bold uppercase h-12 px-5 py-1 ease-in-out duration-300"
+            type="submit">
+            Send
+          </button>
+        </form>
+      </div>
+
+      <!-- Third Column: Google Map -->
+      <div class="md:basis-2/4 basis-[100%]">
+        <iframe class="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d13583.765817276042!2d-7.994791852031185!3d31.662821450420534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0xdafedce17d060b1%3A0x642452f201ffd869!2sCentre%20Hospitalier%20Universitaire%20Mohammed%20VI%D8%8C%20BP2360%20Principal%2C%20Av.%20Ibn%20Sina%2C%20Marrakesh!3m2!1d31.664720799999998!2d-7.9963213!5e0!3m2!1sfr!2sma!4v1733229354597!5m2!1sfr!2sma"
+          style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+  <div class="text-center text-white capitalize bg-violet-950 py-5">
+    all right reserved 2024 &copy
+  </div>
+  <!-- Back to Top Button -->
+  <button id="back-top"
+    class="fixed bottom-5 right-5 px-4 py-2 bg-violet-900 text-white rounded-lg opacity-0 pointer-events-none transition-opacity duration-300">
+    Back to Top
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
 </html>

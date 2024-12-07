@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+    body {
+      font-family: "Roboto", sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"
+    integrity="sha512-1JkMy1LR9bTo3psH+H4SV5bO2dFylgOy+UJhMus1zF4VEFuZVu5lsi4I6iIndE4N9p01z1554ZDcvMSjMaqCBQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Animate css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
+</head>
+
+<body>
+  <div class="content flex bg-gray-50">
+    <!-- Left sidebar -->
+    <div & class="side-nav basis-2/12 bg-violet-950 text-white h-screen flex flex-col">
+      <p class="font-bold text-center text-2xl border-b border-gray-300 py-5">
+        Dashboard
+      </p>
+
+      <div class="flex flex-col justify-between flex-grow">
+        <ul class="mt-10 mx-auto w-full">
+          <li>
+            <a href="/admin/dashboard/index.html"
+              class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">Dashboard<a />
+          </li>
+          <li>
+            <a href="/admin/dashboard/product/index.html"
+              class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">product</a>
+          </li>
+          <li>
+            <a href="/admin/dashboard/order/index.html"
+              class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">orders</a>
+          </li>
+          <li>
+            <a href="/admin/dashboard/categorie/index.html"
+              class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">categorie</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">settings</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">account</a>
+          </li>
+        </ul>
+        <!-- Make sure the logout stays at the bottom of the sidebar -->
+        <div class="mt-auto block text-center py-5 border-gray-300">
+          <a href="#" class="bg-violet-600 py-3 px-5 rounded-xl hover:bg-white hover:text-violet-950">Logout</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right panel 'Data'-->
+    <div class="content-section basis-10/12 flex flex-col">
+      <div class="top-nav bg-white text-gray-600 p-3 border-b border-gray-300">
+        <form class="w-full h-full flex justify-start items-center ml-2" action="" method="POST">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="focus:outline-none py-3 px-5 w-full" type="text" placeholder="Search" />
+        </form>
+      </div>
+      <div class="data text-gray-600 p-6">
+        <div class="page-title mb-5 flex justify-between">
+          <h3 class="font-bold text-3xl">Categorie</h3>
+          <a href="" class="text-center bg-blue-500 px-5 py-3 w-40 text-white rounded-xl capitalize">New Categorie</a>
+        </div>
+
+        <div class="data-table bg-white rounded-xl border p-3 w-full">
+          <table class="table-auto w-full border-collapse border border-gray-300 text-center">
+            <thead class="bg-gray-200">
+              <tr>
+                <th class="border border-gray-300 p-2 text-left ">#</th>
+                <th class="border border-gray-300 p-2 text-left ">Name</th>
+                <th class="border border-gray-300 p-2 text-left ">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 p-3">1</td>
+                <td class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
+                  <p>Pc Portable</p>
+                </td>
+                <td class="border border-gray-300  items-center px-3">
+                  <button
+                    class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
+                  <button
+                    class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
+                  <button
+                    class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">2</td>
+                <td class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
+                  <p>Pc Gamer</p>
+                </td>
+                <td class="border border-gray-300  items-center px-3">
+                  <button
+                    class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
+                  <button
+                    class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
+                  <button
+                    class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">3</td>
+                <td class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
+                  <p>Graphic Card</p>
+                </td>
+                <td class="border border-gray-300  items-center px-3">
+                  <button
+                    class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
+                  <button
+                    class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
+                  <button
+                    class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../script.js"></script>
+</body>
+
+</html>
