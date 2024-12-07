@@ -32,15 +32,45 @@
       <div class="flex flex-col justify-between flex-grow">
         <ul class="mt-10 mx-auto w-full">
           <li>
-            <a href="../../dashboard/index.html" class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">Dashboard<a/>
+            <a href="../../dashboard/index.html"
+              class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">Dashboard<a />
           </li>
-          <li>
-            <a href="../product/index.html"
-              class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">product</a>
-          </li>
-          <li>
+         
+            <!-- Top-level menu item -->
+            <li class="group">
+              <a href="../product/index.html"
+                class="block text-center py-5 hover:bg-white hover:text-violet-950 active:bg-white border-gray-300">
+                Product
+              </a>
+              <!-- Sub-menu -->
+              <ul class=bg-violet-900 w-full">
+                <li class="text-center py-3 border-purple-600 first:border-t first:border-b last:border-b cursor-pointer hover:bg-white hover:text-violet-900">
+                  Product-list
+                </li>
+                <li class="text-center py-3 border-purple-600 first:border-t first:border-b last:border-b cursor-pointer hover:bg-white hover:text-violet-900">
+                  Archive
+                </li>
+              </ul>
+            </li>
+            
+          
+          
+
+          <li class="group">
             <a href="../order/index.html"
-            class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">orders</a>
+              class="block text-center py-5 hover:bg-white hover:text-violet-950 border-gray-300 capitalize">orders</a>
+              <!-- Sub-menu -->
+              <ul class="bg-violet-900 w-full">
+                <li class="text-center py-3 border-purple-600 first:border-t first:border-b border-b cursor-pointer hover:bg-white hover:text-violet-900">
+                  Delivred
+                </li>
+                <li class="text-center py-3 border-purple-600 first:border-t first:border-b border-b cursor-pointer hover:bg-white hover:text-violet-900">
+                  Pending
+                </li>
+                <li class="text-center py-3 border-purple-600 first:border-t first:border-b border-b cursor-pointer hover:bg-white hover:text-violet-900">
+                  Return
+                </li>
+              </ul>
           </li>
           <li>
             <a href="../categorie/index.html"
@@ -75,82 +105,112 @@
           <h3 class="font-bold text-3xl">Product</h3>
           <a href="" class="text-center bg-blue-500 px-5 py-3 w-40 text-white rounded-xl capitalize">New product</a>
         </div>
-        
-       <div class="data-table bg-white rounded-xl border p-3 w-full">
-        <table class="table-auto w-full border-collapse border border-gray-300 text-center">
+
+        <div class="data-table bg-white rounded-xl border p-3 w-full">
+          <table class="table-auto w-full border-collapse border border-gray-300 text-center">
             <thead class="bg-gray-200">
-                <tr>
-                    <th class="border border-gray-300 p-2 text-left ">#</th>
-                    <th class="border border-gray-300 p-2 text-left ">Product Name</th>
-                    <th class="border border-gray-300 p-2 text-left ">Action</th>
-                </tr>
+              <tr>
+                <th class="border border-gray-300 p-2 text-left ">#</th>
+                <th class="border border-gray-300 p-2 text-left ">Product Name</th>
+                <th class="border border-gray-300 p-2 text-left ">Action</th>
+              </tr>
             </thead>
             <tbody>
-                
-                <tr>
-                    <td class="border border-gray-300 p-3">1</td>
-                    <td class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
-                        <a href="#" class="h-20 w-20 flex-shrink-0"><img class="h-full w-full object-cover" src="https://placehold.co/600" alt=""></a>
-                        <p class="ml-4 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum laborum voluptatum.</p>
-                    </td>
-                    <td class="border border-gray-300  items-center px-3">
-                        <button class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
-                        <button class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
-                        <button class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="border border-gray-300 p-3">2</td>
-                    <td class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
-                        <a href="#" class="h-20 w-20 flex-shrink-0"><img class="h-full w-full object-cover" src="https://placehold.co/600" alt=""></a>
-                        <p class="ml-4 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum laborum voluptatum.</p>
-                    </td>
-                    <td class="border border-gray-300  items-center px-3">
-                        <button class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
-                        <button class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
-                        <button class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="border border-gray-300 p-3">3</td>
-                    <td class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
-                        <a href="#" class="h-20 w-20 flex-shrink-0"><img class="h-full w-full object-cover" src="https://placehold.co/600" alt=""></a>
-                        <p class="ml-4 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum laborum voluptatum.</p>
-                    </td>
-                    <td class="border border-gray-300  items-center px-3">
-                        <button class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
-                        <button class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
-                        <button class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="border border-gray-300 p-3">4</td>
-                    <td class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
-                        <a href="#" class="h-20 w-20 flex-shrink-0"><img class="h-full w-full object-cover" src="https://placehold.co/600" alt=""></a>
-                        <p class="ml-4 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum laborum voluptatum.</p>
-                    </td>
-                    <td class="border border-gray-300  items-center px-3">
-                        <button class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
-                        <button class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
-                        <button class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="border border-gray-300 p-3">5</td>
-                    <td class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
-                        <a href="#" class="h-20 w-20 flex-shrink-0"><img class="h-full w-full object-cover" src="https://placehold.co/600" alt=""></a>
-                        <p class="ml-4 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum laborum voluptatum.</p>
-                    </td>
-                    <td class="border border-gray-300  items-center px-3">
-                        <button class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
-                        <button class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
-                        <button class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
-                    </td>
-                </tr>
+
+              <tr>
+                <td class="border border-gray-300 p-3">1</td>
+                <td
+                  class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
+                  <a href="#" class="h-20 w-20 flex-shrink-0"><img class="h-full w-full object-cover"
+                      src="https://placehold.co/600" alt=""></a>
+                  <p class="ml-4 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum
+                    laborum voluptatum.</p>
+                </td>
+                <td class="border border-gray-300  items-center px-3">
+                  <button
+                    class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
+                  <button
+                    class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
+                  <button
+                    class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">2</td>
+                <td
+                  class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
+                  <a href="#" class="h-20 w-20 flex-shrink-0"><img class="h-full w-full object-cover"
+                      src="https://placehold.co/600" alt=""></a>
+                  <p class="ml-4 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum
+                    laborum voluptatum.</p>
+                </td>
+                <td class="border border-gray-300  items-center px-3">
+                  <button
+                    class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
+                  <button
+                    class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
+                  <button
+                    class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">3</td>
+                <td
+                  class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
+                  <a href="#" class="h-20 w-20 flex-shrink-0"><img class="h-full w-full object-cover"
+                      src="https://placehold.co/600" alt=""></a>
+                  <p class="ml-4 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum
+                    laborum voluptatum.</p>
+                </td>
+                <td class="border border-gray-300  items-center px-3">
+                  <button
+                    class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
+                  <button
+                    class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
+                  <button
+                    class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">4</td>
+                <td
+                  class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
+                  <a href="#" class="h-20 w-20 flex-shrink-0"><img class="h-full w-full object-cover"
+                      src="https://placehold.co/600" alt=""></a>
+                  <p class="ml-4 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum
+                    laborum voluptatum.</p>
+                </td>
+                <td class="border border-gray-300  items-center px-3">
+                  <button
+                    class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
+                  <button
+                    class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
+                  <button
+                    class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">5</td>
+                <td
+                  class="border-r border-b first:border-l first:border-t border-gray- flex items-center flex items-center p-3">
+                  <a href="#" class="h-20 w-20 flex-shrink-0"><img class="h-full w-full object-cover"
+                      src="https://placehold.co/600" alt=""></a>
+                  <p class="ml-4 font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum
+                    laborum voluptatum.</p>
+                </td>
+                <td class="border border-gray-300  items-center px-3">
+                  <button
+                    class="bg-green-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500 mb-1">View</button>
+                  <button
+                    class="bg-blue-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-blue-500 hover:border border-blue-500 mb-1">Edit</button>
+                  <button
+                    class="bg-red-500 px-4 py-2 text-white rounded-md hover:bg-white hover:text-red-500 hover:border border-red-500 mb-1">Delete</button>
+                </td>
+              </tr>
             </tbody>
-        </table>
-        
-       </div>
+          </table>
+
+        </div>
       </div>
     </div>
   </div>
